@@ -1,0 +1,16 @@
+.cart {
+    z-index: 1;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 55px;
+    height: 55px;
+    background-color:white !important;
+    border: 1px black solid;
+    border-radius: 50%;
+    .badge{
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+}

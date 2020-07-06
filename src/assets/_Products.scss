@@ -1,0 +1,13 @@
+a:hover {
+    cursor: pointer;
+  }
+  .pic {
+    overflow: hidden;
+  }
+  .pic1 {
+    transform: scale(1, 1);
+    transition: all 0.3s ease-out;
+  }
+  .pic1:hover {
+    transform: scale(1.2, 1.2);
+  }

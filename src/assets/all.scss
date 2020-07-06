@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/bootstrap";
+
+@import "./dashboard";
+@import "./Banner";
+@import "./UserFooter";
+@import "./Cart";
+@import "./Products";
+@import "./ProductSwiper";
+body{
+    font-family: '微軟正黑體';
+}
