@@ -24,7 +24,9 @@ import "swiper/css/swiper.css";
 export default {
   mounted() {
     var mySwiper = new Swiper(".swiper-container", {
-     direction: 'horizontal',
+        direction: 'horizontal',
+        observer: true,
+        observeParents: true,
         loop: true,
         effect:'fade',
         speed : 1500,

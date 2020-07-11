@@ -30,12 +30,11 @@
       <p class="mt-5 mb-3 text-muted" >&copy; 2017-2020</p>
     </form>
 
-    <UserFooter id="footer"> </UserFooter>
+    
   </div>
 </template>
 
 <script>
-import UserFooter from "@/components/User/UserFooter";
 
 export default {
   name: "Login",
@@ -46,9 +45,6 @@ export default {
         password: ""
       }
     };
-  },
-  components: {
-    UserFooter
   },
   methods: {
     signin() {
@@ -90,12 +86,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
-#footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  margin: auto;
-}
+
 
 .form-signin {
   position: relative;
