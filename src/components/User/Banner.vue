@@ -23,8 +23,10 @@ import Swiper from "swiper";
 import "swiper/css/swiper.css";
 export default {
   mounted() {
-    var mySwiper = new Swiper(".swiper-container", {
-     direction: 'horizontal',
+    var mySwiper = new Swiper(".swiper-banner", {
+        direction: 'horizontal',
+        observer: true,
+        observeParents: true,
         loop: true,
         effect:'fade',
         speed : 1500,

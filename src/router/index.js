@@ -8,6 +8,7 @@ import OrdersList from '@/components/pages/Orders'
 import CouponsList from '@/components/pages/Coupons'
 import CustomerOrder from '@/components/pages/customerOrder'
 import CustomerCheckout from '@/components/pages/customerCheckout'
+import CustomerContactUs from '@/components/pages/ContactUs'
 import User from '@/view/User'
 import Products from '@/components/User/Products'
 import UserHome from '@/components/User/UserHome'
@@ -15,6 +16,7 @@ import Product from '@/components/User/Product'
 import Coupons from '@/components/User/Coupons'
 import Order from '@/components/User/Order'
 import CheckOut from '@/components/User/CheckOut'
+import ContactUs from '@/components/User/ContactUs'
 
 //防止重複路由的情況
 const originalPush = VueRouter.prototype.push
@@ -70,6 +72,11 @@ export default new VueRouter({
                     name: 'CheckOut',
                     component: CheckOut,
                 },
+                {
+                    path: 'contact_us',
+                    name: 'UserContactUs',
+                    component: ContactUs,
+                },
             ]
         },
         {
@@ -112,6 +119,11 @@ export default new VueRouter({
                     path: '/CustomerCheckout/:orderId',
                     name: 'CustomerCheckout',
                     component: CustomerCheckout,
+                },
+                {
+                    path: '/customerContactUs',
+                    name: 'CustomerContactUs',
+                    component: CustomerContactUs,
                 },
             ]
         },

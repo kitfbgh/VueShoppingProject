@@ -4,23 +4,22 @@
     <banner></banner>
     <section class="container mt-4 text-center">
       <h3>客人總是在詢問</h3>
-      <h3>這麼好吃的秘訣是什麼</h3>
+      <h3>帥氣穿搭的秘訣是什麼</h3>
       <div class="row mt-4">
         <div class="col-md-4 d-flex align-items-center flex-column">
           <div class="box box-1 mb-4"></div>
           <h3>優良原料</h3>
           <p>
-            我們堅持的是原物料的品質
-            <br />嚴選雞蛋配上傳統麵粉
-            <br />保持一貫的好味道
+            選擇我們品牌的優質服裝
+            <br />嚴選皮革配上傳統染料
+            <br />保持一貫的好風格
           </p>
         </div>
         <div class="col-md-4 d-flex align-items-center flex-column">
           <div class="box box-2 mb-4"></div>
-          <h3>手工現做</h3>
+          <h3>手工設計</h3>
           <p>
-            我們的餅乾是經由甜點師傅
-            <br />每天新鮮現做
+            我們的服裝是經由服裝設計師親自設計
             <br />保證一定的品質
           </p>
         </div>
@@ -28,9 +27,9 @@
           <div class="box box-3 mb-4"></div>
           <h3>新奇創意</h3>
           <p>
-            有別於一般的餅乾
-            <br />我們發揮更多的創意於餅乾的調味
-            <br />創造出味蕾的饗宴
+            有別於一般的服裝
+            <br />我們發揮更多的創意於服裝的特色
+            <br />創造出視覺的饗宴
           </p>
         </div>
       </div>
@@ -80,13 +79,15 @@
 import banner from "./Banner";
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
+let vm = null;
 export default {
   mounted() {
     var mySwiper = new Swiper(".swiper-product", {
       observer: true,
+      loop:true,
       observeParents: true,
-      loop: true,
       slidesPerView: 1,
+      centeredSlides : true,
       breakpoints: {
         540: {
           slidesPerView: 2
@@ -116,7 +117,6 @@ export default {
   },
   methods: {
     getProducts() {
-      const vm = this;
       vm.isLoading = true;
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products/all`;
       vm.$http.get(api).then(res => {
@@ -125,12 +125,11 @@ export default {
       });
     },
     getProduct(id) {
-      const vm = this;
       vm.$router.push(`/product/${id}`);
     }
   },
   created() {
-    const vm = this;
+    vm = this;
     vm.getProducts();
   }
 };
@@ -144,12 +143,12 @@ export default {
   border-radius: 50%;
 }
 .box-1 {
-  background-image: url(https://images.unsplash.com/photo-1568121581570-a30e94219113?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-image: url(https://cdn.pixabay.com/photo/2017/03/19/15/14/the-work-2156788_1280.jpg);
 }
 .box-2 {
-  background-image: url(https://images.unsplash.com/flagged/photo-1561668038-2742fcef75d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/19/15/40/clothes-1839935_1280.jpg);
 }
 .box-3 {
-  background-image: url(https://images.pexels.com/photos/1740893/pexels-photo-1740893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-image: url(https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_1280.jpg);
 }
 </style>

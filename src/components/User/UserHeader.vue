@@ -3,15 +3,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div class="container">
         <router-link to="/" class>
-          <img src="@/images/logo2.png" alt height="40" />
-          <h1 class="sr-only">Backery</h1>
+          <img src="@/images/logo2.png" alt="首頁" height="40" />
         </router-link>
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -25,15 +23,24 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/coupons">優惠券</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" href="#" to="/contact_us">聯絡我們</router-link>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
 </template>
-<style lang="scss" scoped>
-h1 {
-  overflow: hidden;
-  white-space: nowrap;
+<script>
+import $ from "jquery";
+export default {
+  
 }
-</style>
+
+$(function() {
+    $('.nav-link').on('click', function() {
+      $('.navbar-toggler').click();
+    });
+  });
+</script>
