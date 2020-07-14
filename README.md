@@ -1,3 +1,2 @@
 # VueShoppingProject
-
-### https://kitfbgh.github.io/VueShoppingProject/#/
+> https://kitfbgh.github.io/VueShoppingProject/#/
