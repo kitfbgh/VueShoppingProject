@@ -17,7 +17,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
               <router-link class="nav-link" to="/products">商品列表</router-link>
             </li>
             <li class="nav-item">

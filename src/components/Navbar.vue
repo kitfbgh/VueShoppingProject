@@ -96,7 +96,11 @@ export default {
 };
 
 $(function() {
+<<<<<<< HEAD
     $('#sidebarMenu').on('click', function() {
+=======
+    $('.nav-link').on('click', function() {
+>>>>>>> 217ae6e41e2ac61f2492eaf20976f5daebeec8f9
       $('.navbar-toggler').click();
     });
   });
