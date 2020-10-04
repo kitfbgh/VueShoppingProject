@@ -96,7 +96,7 @@ export default {
 };
 
 $(function() {
-    $('#sidebarMenu').on('click', function() {
+    $('.nav-link').on('click', function() {
       $('.navbar-toggler').click();
     });
   });
